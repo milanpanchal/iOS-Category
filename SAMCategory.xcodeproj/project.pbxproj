@@ -22,6 +22,7 @@
 		E019F01C19B733D600F96406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E019F01A19B733D600F96406 /* InfoPlist.strings */; };
 		E019F01E19B733D600F96406 /* SAMCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E019F01D19B733D600F96406 /* SAMCategoryTests.m */; };
 		E025151F19BDAB22000F7458 /* UIColor+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E025151E19BDAB22000F7458 /* UIColor+Additional.m */; };
+		E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E025152119BDBD59000F7458 /* NSString+Additional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		E019F01D19B733D600F96406 /* SAMCategoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMCategoryTests.m; sourceTree = "<group>"; };
 		E025151D19BDAB22000F7458 /* UIColor+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additional.h"; sourceTree = "<group>"; };
 		E025151E19BDAB22000F7458 /* UIColor+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additional.m"; sourceTree = "<group>"; };
+		E025152019BDBD59000F7458 /* NSString+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additional.h"; sourceTree = "<group>"; };
+		E025152119BDBD59000F7458 /* NSString+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				E019EFF919B733D600F96406 /* Supporting Files */,
 				E025151D19BDAB22000F7458 /* UIColor+Additional.h */,
 				E025151E19BDAB22000F7458 /* UIColor+Additional.m */,
+				E025152019BDBD59000F7458 /* NSString+Additional.h */,
+				E025152119BDBD59000F7458 /* NSString+Additional.m */,
 			);
 			path = SAMCategory;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */,
 				E025151F19BDAB22000F7458 /* UIColor+Additional.m in Sources */,
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,
 				E019F00919B733D600F96406 /* SAMViewController.m in Sources */,
