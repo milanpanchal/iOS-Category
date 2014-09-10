@@ -11,6 +11,7 @@
 #import "UIAlertView+Additional.h"
 #import "NSDate+Additional.h"
 #import "UIView+Additional.h"
+#import "UIApplication+Additional.h"
 
 @interface SAMViewController ()
 
@@ -24,6 +25,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor colorWithHexString:@"#2ecc71"];
+    
+    NSLog(@"%@",[[UIApplication sharedApplication] documentsDirectoryURL]);
     
 }
 

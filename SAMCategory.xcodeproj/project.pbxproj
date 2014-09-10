@@ -27,6 +27,7 @@
 		E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */; };
 		E06E756519C03572007500DE /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756419C03572007500DE /* NSDate+Additional.m */; };
 		E06E756819C04B96007500DE /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756719C04B96007500DE /* UIView+Additional.m */; };
+		E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756C19C05294007500DE /* UIApplication+Additional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +70,10 @@
 		E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Additional.m"; sourceTree = "<group>"; };
 		E06E756319C03572007500DE /* NSDate+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additional.h"; path = "../NSDate+Additional.h"; sourceTree = "<group>"; };
 		E06E756419C03572007500DE /* NSDate+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additional.m"; path = "../NSDate+Additional.m"; sourceTree = "<group>"; };
-		E06E756619C04B96007500DE /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
-		E06E756719C04B96007500DE /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
+		E06E756619C04B96007500DE /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "../UIView+Additional.h"; sourceTree = "<group>"; };
+		E06E756719C04B96007500DE /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../UIView+Additional.m"; sourceTree = "<group>"; };
+		E06E756B19C05294007500DE /* UIApplication+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Additional.h"; sourceTree = "<group>"; };
+		E06E756C19C05294007500DE /* UIApplication+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Additional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +103,6 @@
 		E019EFE619B733D600F96406 = {
 			isa = PBXGroup;
 			children = (
-				E06E756619C04B96007500DE /* UIView+Additional.h */,
-				E06E756719C04B96007500DE /* UIView+Additional.m */,
 				E019EFF819B733D600F96406 /* SAMCategory */,
 				E019F01719B733D600F96406 /* SAMCategoryTests */,
 				E019EFF119B733D600F96406 /* Frameworks */,
@@ -134,21 +135,13 @@
 			children = (
 				E019F00119B733D600F96406 /* SAMAppDelegate.h */,
 				E019F00219B733D600F96406 /* SAMAppDelegate.m */,
-				E019F00419B733D600F96406 /* Main.storyboard */,
 				E019F00719B733D600F96406 /* SAMViewController.h */,
 				E019F00819B733D600F96406 /* SAMViewController.m */,
+				E019F00419B733D600F96406 /* Main.storyboard */,
 				E019F00A19B733D600F96406 /* Images.xcassets */,
 				E019EFF919B733D600F96406 /* Supporting Files */,
-				E025151D19BDAB22000F7458 /* UIColor+Additional.h */,
-				E025151E19BDAB22000F7458 /* UIColor+Additional.m */,
-				E025152019BDBD59000F7458 /* NSString+Additional.h */,
-				E025152119BDBD59000F7458 /* NSString+Additional.m */,
-				E025152319BDBE1A000F7458 /* UIImage+Additional.h */,
-				E025152419BDBE1A000F7458 /* UIImage+Additional.m */,
-				E06E756019BEDC8C007500DE /* UIAlertView+Additional.h */,
-				E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */,
-				E06E756319C03572007500DE /* NSDate+Additional.h */,
-				E06E756419C03572007500DE /* NSDate+Additional.m */,
+				E06E756919C05202007500DE /* UIKit Category */,
+				E06E756A19C0520B007500DE /* Foundation Category */,
 			);
 			path = SAMCategory;
 			sourceTree = "<group>";
@@ -180,6 +173,34 @@
 				E019F01A19B733D600F96406 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E06E756919C05202007500DE /* UIKit Category */ = {
+			isa = PBXGroup;
+			children = (
+				E025151D19BDAB22000F7458 /* UIColor+Additional.h */,
+				E025151E19BDAB22000F7458 /* UIColor+Additional.m */,
+				E025152319BDBE1A000F7458 /* UIImage+Additional.h */,
+				E025152419BDBE1A000F7458 /* UIImage+Additional.m */,
+				E06E756019BEDC8C007500DE /* UIAlertView+Additional.h */,
+				E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */,
+				E06E756619C04B96007500DE /* UIView+Additional.h */,
+				E06E756719C04B96007500DE /* UIView+Additional.m */,
+				E06E756B19C05294007500DE /* UIApplication+Additional.h */,
+				E06E756C19C05294007500DE /* UIApplication+Additional.m */,
+			);
+			name = "UIKit Category";
+			sourceTree = "<group>";
+		};
+		E06E756A19C0520B007500DE /* Foundation Category */ = {
+			isa = PBXGroup;
+			children = (
+				E025152019BDBD59000F7458 /* NSString+Additional.h */,
+				E025152119BDBD59000F7458 /* NSString+Additional.m */,
+				E06E756319C03572007500DE /* NSDate+Additional.h */,
+				E06E756419C03572007500DE /* NSDate+Additional.m */,
+			);
+			name = "Foundation Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +304,7 @@
 				E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */,
 				E06E756519C03572007500DE /* NSDate+Additional.m in Sources */,
 				E025151F19BDAB22000F7458 /* UIColor+Additional.m in Sources */,
+				E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */,
 				E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */,
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,
 				E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */,
