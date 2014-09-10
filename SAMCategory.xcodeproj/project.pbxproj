@@ -26,6 +26,7 @@
 		E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E025152419BDBE1A000F7458 /* UIImage+Additional.m */; };
 		E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */; };
 		E06E756519C03572007500DE /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756419C03572007500DE /* NSDate+Additional.m */; };
+		E06E756819C04B96007500DE /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756719C04B96007500DE /* UIView+Additional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Additional.m"; sourceTree = "<group>"; };
 		E06E756319C03572007500DE /* NSDate+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additional.h"; path = "../NSDate+Additional.h"; sourceTree = "<group>"; };
 		E06E756419C03572007500DE /* NSDate+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additional.m"; path = "../NSDate+Additional.m"; sourceTree = "<group>"; };
+		E06E756619C04B96007500DE /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
+		E06E756719C04B96007500DE /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 		E019EFE619B733D600F96406 = {
 			isa = PBXGroup;
 			children = (
+				E06E756619C04B96007500DE /* UIView+Additional.h */,
+				E06E756719C04B96007500DE /* UIView+Additional.m */,
 				E019EFF819B733D600F96406 /* SAMCategory */,
 				E019F01719B733D600F96406 /* SAMCategoryTests */,
 				E019EFF119B733D600F96406 /* Frameworks */,
@@ -282,6 +287,7 @@
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,
 				E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */,
 				E019F00919B733D600F96406 /* SAMViewController.m in Sources */,
+				E06E756819C04B96007500DE /* UIView+Additional.m in Sources */,
 				E019EFFF19B733D600F96406 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
