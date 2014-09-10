@@ -28,6 +28,7 @@
 		E06E756519C03572007500DE /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756419C03572007500DE /* NSDate+Additional.m */; };
 		E06E756819C04B96007500DE /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756719C04B96007500DE /* UIView+Additional.m */; };
 		E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756C19C05294007500DE /* UIApplication+Additional.m */; };
+		E06E756F19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E06E756719C04B96007500DE /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../UIView+Additional.m"; sourceTree = "<group>"; };
 		E06E756B19C05294007500DE /* UIApplication+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Additional.h"; sourceTree = "<group>"; };
 		E06E756C19C05294007500DE /* UIApplication+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Additional.m"; sourceTree = "<group>"; };
+		E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +141,9 @@
 				E019F00819B733D600F96406 /* SAMViewController.m */,
 				E019F00419B733D600F96406 /* Main.storyboard */,
 				E019F00A19B733D600F96406 /* Images.xcassets */,
-				E019EFF919B733D600F96406 /* Supporting Files */,
 				E06E756919C05202007500DE /* UIKit Category */,
 				E06E756A19C0520B007500DE /* Foundation Category */,
+				E019EFF919B733D600F96406 /* Supporting Files */,
 			);
 			path = SAMCategory;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 		E019EFF919B733D600F96406 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */,
 				E019EFFA19B733D600F96406 /* SAMCategory-Info.plist */,
 				E019EFFB19B733D600F96406 /* InfoPlist.strings */,
 				E019EFFE19B733D600F96406 /* main.m */,
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06E756F19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg in Resources */,
 				E019F00B19B733D600F96406 /* Images.xcassets in Resources */,
 				E019EFFD19B733D600F96406 /* InfoPlist.strings in Resources */,
 				E019F00619B733D600F96406 /* Main.storyboard in Resources */,
