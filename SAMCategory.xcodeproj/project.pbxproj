@@ -25,6 +25,7 @@
 		E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E025152119BDBD59000F7458 /* NSString+Additional.m */; };
 		E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E025152419BDBE1A000F7458 /* UIImage+Additional.m */; };
 		E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */; };
+		E06E756519C03572007500DE /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756419C03572007500DE /* NSDate+Additional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		E025152419BDBE1A000F7458 /* UIImage+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additional.m"; sourceTree = "<group>"; };
 		E06E756019BEDC8C007500DE /* UIAlertView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Additional.h"; sourceTree = "<group>"; };
 		E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Additional.m"; sourceTree = "<group>"; };
+		E06E756319C03572007500DE /* NSDate+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additional.h"; path = "../NSDate+Additional.h"; sourceTree = "<group>"; };
+		E06E756419C03572007500DE /* NSDate+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additional.m"; path = "../NSDate+Additional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				E025152419BDBE1A000F7458 /* UIImage+Additional.m */,
 				E06E756019BEDC8C007500DE /* UIAlertView+Additional.h */,
 				E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */,
+				E06E756319C03572007500DE /* NSDate+Additional.h */,
+				E06E756419C03572007500DE /* NSDate+Additional.m */,
 			);
 			path = SAMCategory;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */,
+				E06E756519C03572007500DE /* NSDate+Additional.m in Sources */,
 				E025151F19BDAB22000F7458 /* UIColor+Additional.m in Sources */,
 				E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */,
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,

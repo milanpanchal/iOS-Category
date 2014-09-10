@@ -9,6 +9,7 @@
 #import "SAMViewController.h"
 #import "UIColor+Additional.h"
 #import "UIAlertView+Additional.h"
+#import "NSDate+Additional.h"
 
 @interface SAMViewController ()
 
@@ -43,6 +44,12 @@
         }
 
     }];
+    
+    NSLog(@"Today %@", [NSDate date]);
+    NSLog(@"HOUR %d", [[NSDate date] hour]);
+    NSLog(@"HOUR %d", [[NSDate dateYesterday] distanceInDaysToDate:[NSDate date]]);
+    
+
 }
 
 - (void)didReceiveMemoryWarning
