@@ -29,6 +29,7 @@
 		E06E756819C04B96007500DE /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756719C04B96007500DE /* UIView+Additional.m */; };
 		E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756C19C05294007500DE /* UIApplication+Additional.m */; };
 		E06E756F19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */; };
+		E06E757219C066E5007500DE /* NSObject+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E757119C066E5007500DE /* NSObject+Additional.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		E06E756B19C05294007500DE /* UIApplication+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Additional.h"; sourceTree = "<group>"; };
 		E06E756C19C05294007500DE /* UIApplication+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Additional.m"; sourceTree = "<group>"; };
 		E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg"; sourceTree = "<group>"; };
+		E06E757019C066E5007500DE /* NSObject+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additional.h"; sourceTree = "<group>"; };
+		E06E757119C066E5007500DE /* NSObject+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additional.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 				E025152119BDBD59000F7458 /* NSString+Additional.m */,
 				E06E756319C03572007500DE /* NSDate+Additional.h */,
 				E06E756419C03572007500DE /* NSDate+Additional.m */,
+				E06E757019C066E5007500DE /* NSObject+Additional.h */,
+				E06E757119C066E5007500DE /* NSObject+Additional.m */,
 			);
 			name = "Foundation Category";
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */,
 				E06E756519C03572007500DE /* NSDate+Additional.m in Sources */,
 				E025151F19BDAB22000F7458 /* UIColor+Additional.m in Sources */,
+				E06E757219C066E5007500DE /* NSObject+Additional.m in Sources */,
 				E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */,
 				E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */,
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,

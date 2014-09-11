@@ -10,29 +10,29 @@
 	<string>SAMCategory</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9CBA74B8-F520-4A55-BE4D-2BA222368254</key>
+		<key>C496CAE2E6F362913E278FFFFECA1D118A75AD2B</key>
 		<string>https://github.com/milanpanchal/iOS-Category.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SAMCategory.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9CBA74B8-F520-4A55-BE4D-2BA222368254</key>
+		<key>C496CAE2E6F362913E278FFFFECA1D118A75AD2B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/milanpanchal/iOS-Category.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9CBA74B8-F520-4A55-BE4D-2BA222368254</string>
+	<string>C496CAE2E6F362913E278FFFFECA1D118A75AD2B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9CBA74B8-F520-4A55-BE4D-2BA222368254</string>
+			<string>C496CAE2E6F362913E278FFFFECA1D118A75AD2B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SAMCategory</string>
 		</dict>

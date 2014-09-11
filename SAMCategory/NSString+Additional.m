@@ -12,9 +12,7 @@
 
 - (BOOL)isNull {
     
-    if([self isKindOfClass:[NSNull class]] ||
-       [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0){
-        
+    if([self isKindOfClass:[NSNull class]] || [self isEmpty]) {
         return YES;
     }
     
@@ -33,4 +31,41 @@
     
 }
 
+- (NSString *)trimWhitespace {
+    
+//    NSMutableString *str = [self mutableCopy];
+//    CFStringTrimWhitespace((__bridge CFMutableStringRef)str);
+//    return str;
+    
+    return [self stringByTrimmingCharactersInSet:
+            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (BOOL)isEmpty {
+    return [[self trimWhitespace] isEqualToString:@""];
+}
+
+#pragma mark - URL Encoding and Decoding
+- (NSString *)urlEncode {
+    return [self urlEncodeUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding {
+    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                                 (__bridge CFStringRef)self,
+                                                                                 NULL,
+                                                                                 (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ",
+                                                                                 CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
+- (NSString *)urlDecode {
+    return [self urlDecodeUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding {
+    return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+                                                                                                 (__bridge CFStringRef)self,
+                                                                                                 CFSTR(""),
+                                                                                                 CFStringConvertNSStringEncodingToEncoding(encoding));
+}
 @end
