@@ -18,6 +18,8 @@
 
 - (BOOL)isEmpty ;
 
+- (BOOL)isStartsWithACapitalLetter;
+
 #pragma mark - URL Encoding and Decoding
 
 - (NSString *)urlEncode ;

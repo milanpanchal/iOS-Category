@@ -45,6 +45,14 @@
     return [[self trimWhitespace] isEqualToString:@""];
 }
 
+- (BOOL)isStartsWithACapitalLetter {
+
+    unichar firstCharacter = [self characterAtIndex:0];
+    return [[NSCharacterSet uppercaseLetterCharacterSet]
+            characterIsMember:firstCharacter];
+
+}
+
 #pragma mark - URL Encoding and Decoding
 - (NSString *)urlEncode {
     return [self urlEncodeUsingEncoding:NSUTF8StringEncoding];
