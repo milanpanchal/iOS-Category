@@ -15,6 +15,7 @@
 #import "UIImage+Additional.h"
 #import "NSString+Additional.h"
 #import "NSObject+Additional.h"
+#import "SAMUtility.h"
 
 @interface SAMViewController ()
 
@@ -45,6 +46,9 @@
     btn.layer.cornerRadius = 10;
     [self.view addSubview:btn];
 
+    NSLog(@"%@",[SAMUtility getIPAddress]);
+    NSLog(@"%@",[SAMUtility getIPAddresses]);
+    
 }
 
 - (void)didReceiveMemoryWarning
