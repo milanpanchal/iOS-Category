@@ -26,11 +26,12 @@
 		E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E025152419BDBE1A000F7458 /* UIImage+Additional.m */; };
 		E02EAE9419C41F360080AFAF /* SAMUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E02EAE9319C41F360080AFAF /* SAMUtility.m */; };
 		E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */; };
-		E06E756819C04B96007500DE /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756719C04B96007500DE /* UIView+Additional.m */; };
 		E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756C19C05294007500DE /* UIApplication+Additional.m */; };
 		E06E756F19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */; };
 		E06E757219C066E5007500DE /* NSObject+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E757119C066E5007500DE /* NSObject+Additional.m */; };
-		E087324C19C422A600B8A3D1 /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E756419C03572007500DE /* NSDate+Additional.m */; };
+		E0C42A8019D044FF00D5DC2F /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C42A7E19D044FF00D5DC2F /* NSDate+Additional.m */; };
+		E0C42A8319D0451400D5DC2F /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C42A8219D0451400D5DC2F /* UIView+Additional.m */; };
+		E0C42A8619D045B100D5DC2F /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C42A8519D045B100D5DC2F /* NSData+Conversion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,15 +74,17 @@
 		E02EAE9319C41F360080AFAF /* SAMUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMUtility.m; sourceTree = "<group>"; };
 		E06E756019BEDC8C007500DE /* UIAlertView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Additional.h"; sourceTree = "<group>"; };
 		E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Additional.m"; sourceTree = "<group>"; };
-		E06E756319C03572007500DE /* NSDate+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additional.h"; path = "../NSDate+Additional.h"; sourceTree = "<group>"; };
-		E06E756419C03572007500DE /* NSDate+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additional.m"; path = "../NSDate+Additional.m"; sourceTree = "<group>"; };
-		E06E756619C04B96007500DE /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "../UIView+Additional.h"; sourceTree = "<group>"; };
-		E06E756719C04B96007500DE /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../UIView+Additional.m"; sourceTree = "<group>"; };
 		E06E756B19C05294007500DE /* UIApplication+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Additional.h"; sourceTree = "<group>"; };
 		E06E756C19C05294007500DE /* UIApplication+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Additional.m"; sourceTree = "<group>"; };
 		E06E756E19C05559007500DE /* 2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2d7e7ba0-0fbb-11e4-b625-22000a9780da-medium.jpeg"; sourceTree = "<group>"; };
 		E06E757019C066E5007500DE /* NSObject+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additional.h"; sourceTree = "<group>"; };
 		E06E757119C066E5007500DE /* NSObject+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additional.m"; sourceTree = "<group>"; };
+		E0C42A7E19D044FF00D5DC2F /* NSDate+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additional.m"; sourceTree = "<group>"; };
+		E0C42A7F19D044FF00D5DC2F /* NSDate+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additional.h"; sourceTree = "<group>"; };
+		E0C42A8119D0451400D5DC2F /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
+		E0C42A8219D0451400D5DC2F /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
+		E0C42A8419D045B100D5DC2F /* NSData+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
+		E0C42A8519D045B100D5DC2F /* NSData+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,14 +192,14 @@
 		E06E756919C05202007500DE /* UIKit Category */ = {
 			isa = PBXGroup;
 			children = (
+				E0C42A8119D0451400D5DC2F /* UIView+Additional.h */,
+				E0C42A8219D0451400D5DC2F /* UIView+Additional.m */,
 				E025151D19BDAB22000F7458 /* UIColor+Additional.h */,
 				E025151E19BDAB22000F7458 /* UIColor+Additional.m */,
 				E025152319BDBE1A000F7458 /* UIImage+Additional.h */,
 				E025152419BDBE1A000F7458 /* UIImage+Additional.m */,
 				E06E756019BEDC8C007500DE /* UIAlertView+Additional.h */,
 				E06E756119BEDC8C007500DE /* UIAlertView+Additional.m */,
-				E06E756619C04B96007500DE /* UIView+Additional.h */,
-				E06E756719C04B96007500DE /* UIView+Additional.m */,
 				E06E756B19C05294007500DE /* UIApplication+Additional.h */,
 				E06E756C19C05294007500DE /* UIApplication+Additional.m */,
 			);
@@ -206,10 +209,12 @@
 		E06E756A19C0520B007500DE /* Foundation Category */ = {
 			isa = PBXGroup;
 			children = (
+				E0C42A8419D045B100D5DC2F /* NSData+Conversion.h */,
+				E0C42A8519D045B100D5DC2F /* NSData+Conversion.m */,
+				E0C42A7F19D044FF00D5DC2F /* NSDate+Additional.h */,
+				E0C42A7E19D044FF00D5DC2F /* NSDate+Additional.m */,
 				E025152019BDBD59000F7458 /* NSString+Additional.h */,
 				E025152119BDBD59000F7458 /* NSString+Additional.m */,
-				E06E756319C03572007500DE /* NSDate+Additional.h */,
-				E06E756419C03572007500DE /* NSDate+Additional.m */,
 				E06E757019C066E5007500DE /* NSObject+Additional.h */,
 				E06E757119C066E5007500DE /* NSObject+Additional.m */,
 			);
@@ -316,16 +321,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E025152219BDBD59000F7458 /* NSString+Additional.m in Sources */,
-				E087324C19C422A600B8A3D1 /* NSDate+Additional.m in Sources */,
 				E025151F19BDAB22000F7458 /* UIColor+Additional.m in Sources */,
 				E06E757219C066E5007500DE /* NSObject+Additional.m in Sources */,
 				E02EAE9419C41F360080AFAF /* SAMUtility.m in Sources */,
 				E06E756D19C05294007500DE /* UIApplication+Additional.m in Sources */,
+				E0C42A8019D044FF00D5DC2F /* NSDate+Additional.m in Sources */,
 				E025152519BDBE1A000F7458 /* UIImage+Additional.m in Sources */,
+				E0C42A8319D0451400D5DC2F /* UIView+Additional.m in Sources */,
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,
+				E0C42A8619D045B100D5DC2F /* NSData+Conversion.m in Sources */,
 				E06E756219BEDC8C007500DE /* UIAlertView+Additional.m in Sources */,
 				E019F00919B733D600F96406 /* SAMViewController.m in Sources */,
-				E06E756819C04B96007500DE /* UIView+Additional.m in Sources */,
 				E019EFFF19B733D600F96406 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
