@@ -85,6 +85,7 @@
 		E0C42A8219D0451400D5DC2F /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		E0C42A8419D045B100D5DC2F /* NSData+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
 		E0C42A8519D045B100D5DC2F /* NSData+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
+		E0C42A8719D0466200D5DC2F /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +153,7 @@
 				E019F00A19B733D600F96406 /* Images.xcassets */,
 				E02EAE9219C41F360080AFAF /* SAMUtility.h */,
 				E02EAE9319C41F360080AFAF /* SAMUtility.m */,
+				E0C42A8719D0466200D5DC2F /* Categories.h */,
 				E06E756919C05202007500DE /* UIKit Category */,
 				E06E756A19C0520B007500DE /* Foundation Category */,
 				E019EFF919B733D600F96406 /* Supporting Files */,

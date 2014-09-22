@@ -7,14 +7,7 @@
 //
 
 #import "SAMViewController.h"
-#import "UIColor+Additional.h"
-#import "UIAlertView+Additional.h"
-#import "NSDate+Additional.h"
-#import "UIView+Additional.h"
-#import "UIApplication+Additional.h"
-#import "UIImage+Additional.h"
-#import "NSString+Additional.h"
-#import "NSObject+Additional.h"
+#import "Categories.h"
 #import "SAMUtility.h"
 
 @interface SAMViewController ()
