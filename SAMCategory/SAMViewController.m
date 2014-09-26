@@ -38,9 +38,6 @@
     btn.layer.borderWidth = 5.0f;
     btn.layer.cornerRadius = 10;
     [self.view addSubview:btn];
-
-    NSLog(@"%@",[SAMUtility getIPAddress]);
-    NSLog(@"%@",[SAMUtility getIPAddresses]);
     
 }
 

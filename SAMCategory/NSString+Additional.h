@@ -20,6 +20,9 @@
 
 - (BOOL)isStartsWithACapitalLetter;
 
+- (NSUInteger)numberOfWords ;
+
+
 #pragma mark - URL Encoding and Decoding
 
 - (NSString *)urlEncode ;

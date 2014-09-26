@@ -53,6 +53,17 @@
 
 }
 
+- (NSUInteger)numberOfWords {
+    __block NSUInteger count = 0;
+    [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
+                            options:NSStringEnumerationByWords|NSStringEnumerationSubstringNotRequired
+                         usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                             count++;
+                         }];
+    return count;
+}
+
+
 #pragma mark - URL Encoding and Decoding
 - (NSString *)urlEncode {
     return [self urlEncodeUsingEncoding:NSUTF8StringEncoding];
