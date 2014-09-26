@@ -22,6 +22,8 @@
 
 - (NSUInteger)numberOfWords ;
 
++ (NSString *)truncateString:(NSString *) string toCharacterCount:(NSUInteger) count ;
+
 
 #pragma mark - URL Encoding and Decoding
 

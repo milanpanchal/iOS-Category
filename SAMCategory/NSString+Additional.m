@@ -64,6 +64,20 @@
 }
 
 
++ (NSString *)truncateString:(NSString *) string toCharacterCount:(NSUInteger) count {
+    
+    NSRange range = { 0, MIN(string.length, count) };
+    range = [string rangeOfComposedCharacterSequencesForRange: range];
+    NSString *trunc = [string substringWithRange: range];
+    
+    if (trunc.length < string.length) {
+        trunc = [trunc stringByAppendingString: @"..."];
+    }
+    
+    return trunc;
+    
+} // truncateString
+
 #pragma mark - URL Encoding and Decoding
 - (NSString *)urlEncode {
     return [self urlEncodeUsingEncoding:NSUTF8StringEncoding];
