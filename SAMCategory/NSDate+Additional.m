@@ -436,6 +436,14 @@ static const unsigned componentFlags = (NSYearCalendarUnit| NSMonthCalendarUnit 
     return components.day;
 }
 
+#pragma mark - 
+
+- (NSDate *)dateByTruncatingTime {
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self];
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+
 #pragma mark - Decomposing Dates
 
 - (NSInteger) nearestHour
