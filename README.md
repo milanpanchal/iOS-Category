@@ -19,8 +19,9 @@ Please feel free to contribute the project as much as you can. Planning to add m
 How To Use 
 ==========
 
-Pretty simple. Just download or clone in Desktop. Copy paste all category files that you want to include in your project. Import Categories.h file and use it.
+Pretty simple. Just download or clone in Desktop. Drag and drop HelperClasses folder in your project. Add following statement into ***projectname*-Prefix.pch** file.
 
+`#import "Categories.h"`
 
 Contact
 =======
