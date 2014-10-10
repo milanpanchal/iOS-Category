@@ -16,4 +16,6 @@
 
 + (UIColor *)colorWithRGB:(int)red green:(int)green blue:(int)blue alpha:(CGFloat)alpha ;
 
++ (UIColor*)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height ;
+
 @end

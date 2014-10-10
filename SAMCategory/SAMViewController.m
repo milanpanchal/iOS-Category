@@ -14,6 +14,7 @@
 
 @end
 
+
 @implementation SAMViewController
 
 - (void)viewDidLoad
@@ -22,22 +23,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor grayColor];
     
-    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
-    [btn1 setTitle:@"Border Color" forState:UIControlStateNormal];
-    [btn1 setCenter:self.view.center];
-    btn1.layer.borderWidth = 5.0f;
+    UIColor *fromColor = [UIColor colorWithHexString:@"#1F1F1F"];
+    UIColor *toColor = [UIColor colorWithHexString:@"#CC3737"];
     
-    [self.view addSubview:btn1];
+    _gradientLable.textColor = [UIColor gradientFromColor:fromColor
+                                                  toColor:toColor
+                                               withHeight:_gradientLable.height];
 
     
-    [btn1 roundedCornersOnAllSideWithRadious:10];
     
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
-    [btn setTitle:@"Border Color" forState:UIControlStateNormal];
-    btn.layer.borderWidth = 5.0f;
-    btn.layer.cornerRadius = 10;
-    [self.view addSubview:btn];
+
  
 }
 
