@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/milan_panchal24"
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/milanpanchal/iOS-Category.git", :tag => "0.0.1" }
-  s.source_files  = "Source/*.{h,m}"
+  s.source_files  = "Source"
   s.requires_arc = true
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 end
