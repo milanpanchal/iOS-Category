@@ -57,4 +57,29 @@ static const char kSAMAlertWrapper;
 }
 
 
++ (void)showAlertViewWithTitle:(NSString*)title andMessage:(NSString *)message {
+    
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:title
+                                                       message:message
+                                                      delegate:nil
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil];
+    
+    
+    [alertView show];
+}
+
+
++ (void)showAlertViewWithTitle:(NSString*)title{
+    
+    [self showAlertViewWithTitle:title andMessage:nil];
+}
+
+
++ (void)showAlertViewWithError:(NSError*)error{
+
+    [self showAlertViewWithTitle:error.description andMessage:nil];
+    
+}
+
 @end

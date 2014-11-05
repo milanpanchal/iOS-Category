@@ -32,7 +32,8 @@
 
     
     
-
+    NSString *myString = @"abcdefghijklmnopqrstuvwxyz";
+    NSLog(@"%@",[myString reverseString]);
  
 }
 

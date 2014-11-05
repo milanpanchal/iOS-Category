@@ -22,6 +22,8 @@
 
 - (NSUInteger)numberOfWords ;
 
+- (NSString *)reverseString ;
+
 + (NSString *)truncateString:(NSString *) string toCharacterCount:(NSUInteger) count ;
 
 

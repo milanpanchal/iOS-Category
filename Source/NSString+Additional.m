@@ -63,6 +63,27 @@
     return count;
 }
 
+- (NSString *)reverseString {
+    
+//    int len = [self length];
+//    
+//    NSMutableString *reversedStr = [NSMutableString stringWithCapacity:len];
+//    while (len--) {
+//        [reversedStr appendFormat:@"%C", [self characterAtIndex:len]];
+//    }
+    
+    // New way
+    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[self length]];
+    
+    [self enumerateSubstringsInRange:NSMakeRange(0,[self length])
+                             options:(NSStringEnumerationReverse | NSStringEnumerationByComposedCharacterSequences)
+                          usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                                  [reversedString appendString:substring];
+                              }];
+
+    
+    return reversedString;
+}
 
 + (NSString *)truncateString:(NSString *) string toCharacterCount:(NSUInteger) count {
     

@@ -31,4 +31,13 @@
 + (NSString *)getIPAddress ;
 
 + (NSDictionary *)getIPAddresses ;
+
+#pragma mark - GET FREE DISK SPACE
+
++ (uint64_t)getFreeDiskSpace ;
+
+#pragma mark - OTHER
+
++ (BOOL)isCameraAvailable ;
+
 @end

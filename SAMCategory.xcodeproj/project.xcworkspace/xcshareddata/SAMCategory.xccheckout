@@ -14,7 +14,7 @@
 		<string>https://github.com/milanpanchal/iOS-Category.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SAMCategory.xcodeproj/project.xcworkspace</string>
+	<string>SAMCategory.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C496CAE2E6F362913E278FFFFECA1D118A75AD2B</key>

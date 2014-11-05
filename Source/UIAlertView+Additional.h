@@ -12,4 +12,11 @@
 
 - (void)showWithCompletion:(void(^)(UIAlertView *alertView, NSInteger buttonIndex))completion ;
 
++ (void)showAlertViewWithTitle:(NSString*)title andMessage:(NSString *)message ;
+
++ (void)showAlertViewWithTitle:(NSString*)title ;
+
++ (void)showAlertViewWithError:(NSError*)error ;
+
+    
 @end
