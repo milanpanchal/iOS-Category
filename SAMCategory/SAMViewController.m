@@ -8,7 +8,13 @@
 
 #import "SAMViewController.h"
 
-@interface SAMViewController ()
+static NSString *cellIdenifier = @"cellIdenifier";
+
+@interface SAMViewController ()<UITableViewDelegate,UITableViewDataSource> {
+
+    NSArray *headerArray;
+    NSArray *tableDataArray;
+}
 
 @end
 
@@ -21,14 +27,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor grayColor];
     
-    UIColor *fromColor = [UIColor colorWithHexString:@"#1F1F1F"];
-    UIColor *toColor = [UIColor colorWithHexString:@"#CC3737"];
-    
-    _gradientLable.textColor = [UIColor gradientFromColor:fromColor
-                                                  toColor:toColor
-                                               withHeight:_gradientLable.height];
 
-    
     
     NSString *myString = @"abcdefghijklmnopqrstuvwxyz";
     NSLog(@"Reverse String %@",[myString reverseString]);
@@ -40,7 +39,45 @@
     NSInteger year = [components year];
 
     debug(@"day %ld, month %ld, year %ld",(long)day,(long)month,(long)year);
+ 
+    NSArray *categoryClasses = @[@"NSData",
+                                 @"NSDate",
+                                 @"NSObject",
+                                 @"NSString",
+                                 @"UIAlertView",
+                                 @"UIApplication",
+                                 @"UIColor",
+                                 @"UIImage",
+                                 @"UIView",
+                                 @"UIViewController"];
     
+    NSArray *macroArray = @[@"Convert Radians to degrees",
+                       @"Convert degress to radians",
+                       @"Predefine Date formats",
+                       @"Convert NULL objects into nil",
+                       @"Convert BOOL value into String",
+                       @"Date/time Components",
+                       @"debug log - Only in debug mode",
+                       @"RGB/RGBA Color Macros",
+                       @"Is device is iPhone or iPad",
+                       @"Check iOS Version",
+                       @"Invalidate Timer and more..."];
+
+    NSArray *utilityArray = @[@"Get Unique ID - UUID",
+                     @"Check: App running first time?",
+                     @"Get local country name and code",
+                     @"Get IP address",
+                     @"Get free desk space",
+                     @"Check: Camera availability"];
+    
+    
+    headerArray = @[@"Category classes for...",@"Macros",@"Utility methods"];
+    
+    tableDataArray = @[categoryClasses, macroArray, utilityArray];
+    [self.tblView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdenifier];
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +85,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return tableDataArray.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [tableDataArray[section] count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdenifier forIndexPath:indexPath];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdenifier];
+    }
+    
+
+    cell.textLabel.text = tableDataArray[indexPath.section][indexPath.row];
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+    return headerArray[section];
+}
+
 
 
 @end

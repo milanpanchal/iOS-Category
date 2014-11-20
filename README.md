@@ -21,6 +21,8 @@ Pretty simple. Just download or clone in Desktop. Drag and drop Source folder in
 
 Gradient color to Label using UIColor Category class
 
+![image](https://raw.github.com/milanpanchal/iOS-Category/master/Screenshots/combine_images.png)
+
 ![image](https://raw.github.com/milanpanchal/iOS-Category/master/Screenshots/gredient_example.png)
 
 

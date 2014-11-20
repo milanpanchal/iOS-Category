@@ -10,5 +10,5 @@
 
 @interface SAMViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *gradientLable;
+@property (weak, nonatomic) IBOutlet UITableView *tblView;
 @end
