@@ -1,0 +1,137 @@
+//
+//  Macros.h
+//  SAMCategory
+//
+//  Created by MilanPanchal on 20/11/14.
+//  Copyright (c) 2014 Pantech. All rights reserved.
+//
+
+#ifndef SAMCategory_Macros_h
+#define SAMCategory_Macros_h
+
+
+/** Float: Degrees -> Radian **/
+#define DEGREES_TO_RADIANS(degrees) ((M_PI * degrees) / 180.0)
+
+/** Float: Radians -> Degrees **/
+#define RADIANS_TO_DEGREES(radians) ((radians * 180.0)/ M_PI)
+
+
+
+/**Navigation - Go back - POP view controller **/
+#define GOBACK [self.navigationController popViewControllerAnimated:YES]
+
+
+/** Float: Return screen width **/
+#define SCREEN_WIDTH    ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || \
+                        ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? \
+                        [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+
+/** Float: Return screen height **/
+#define SCREEN_HEIGHT   ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || \
+                        ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? \
+                        [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+
+// Timer Invalidation
+#define UA_INVALIDATE_TIMER(t) [t invalidate]; t = nil;
+
+
+// Threading
+#define UA_RUN_ON_MAIN_THREAD if (![NSThread isMainThread]) \
+{ dispatch_sync(dispatch_get_main_queue(), ^{ [self performSelector:_cmd]; }); return; };
+
+
+// Device Info
+#define IS_IPAD     (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) /** BOOL: Detect if device is an iPad **/
+
+#define IS_IPHONE   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) /** BOOL: Detect if device is an iPhone or iPod **/
+
+#define IS_IPHONE5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE /** BOOL: Detect if device is an iPhone5 or not **/
+
+
+/** BOOL: Is iOS version is greater than or equal to specified version**/
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) \
+            ([[[UIDevice currentDevice] systemVersion] compare:(v) options:NSNumericSearch] != NSOrderedAscending)
+
+/** BOOL: IS_RETINA **/
+#define IS_RETINA_DEVICE ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] >= 2) 
+
+/** BOOL: Is multi tasking support by device or not **/
+
+#define IS_MULTI_TASKING_SUPPORTED ([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)] && [[UIDevice currentDevice] isMultitaskingSupported])
+
+
+// Colors
+#define UA_RGBA(r,g,b,a)    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define UA_RGB(r,g,b)       UA_RGBA(r, g, b, 1.0f)
+
+
+// Return "YES" or "NO" string based on boolean value
+#define NSStringFromBool(b) (b ? @"YES" : @"NO")
+
+
+// Debugging / Logging
+#ifdef DEBUG
+    #define debug(format, ...) \
+    CFShow((__bridge void *)[NSString stringWithFormat:@"%s [LINE: %d] ==>> " format,__PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__]);
+#else
+    #define debug(format, ...)
+#endif
+
+#define debugBounds(view) debug(@"%@ bounds: %@", view, NSStringFromRect([view bounds]))
+#define debugFrame(view)  debug(@"%@ frame: %@", view, NSStringFromRect([view frame]))
+
+
+/** Flush Auto Release Pool **/
+#define FLUSH_POOL(p)   [p drain]; p = [[NSAutoreleasePool alloc] init]
+
+/**Date formats**/
+
+#define DATE_FORMAT_DD_MM_YYYY              @"dd-MM-yyyy"
+#define DATE_FORMAT_YYYY_MM_DD              @"yyyy-MM-dd"
+
+#define DATE_FORMAT_MMM_DD_YYYY             @"MMM dd, yyyy"
+
+#define DATE_FORMAT_DD_MM_YYYY_HH_MM_12H    @"dd-MM-yyyy hh:mm a"
+#define DATE_FORMAT_MMM_DD_YYYY_HH_MM_SS    @"MMM dd, yyyy hh:mm:ss a"
+#define DATE_FORMAT_MMM_DD_YYYY_HH_MM_12H   @"MMM dd, yyyy hh:mm a"
+
+#define DATE_FORMAT_HH_MM_SS                @"HH:mm:ss"
+
+
+/** Convert object to nil if its from NSNull class**/
+
+#define NULL_TO_NIL(obj) ({ _typeof_ (obj) __obj = (obj); __obj == [NSNull null] ? nil : obj; })
+
+
+/** Try - catch block
+ *Use TRY CATCH IN ANY METHOD LIKE THIS
+ *- (void)anyMethodThatCanGenerateException {
+ *  TRY_CATCH_START
+ *    code that generate exception
+ *
+ *  TRY_CATCH_END
+ * }
+ **/
+
+#define TRY_CATCH_START @try{
+
+#define TRY_CATCH_END }@catch(NSException *e){NSLog(@"\n\n\n\n\n\n\
+\n\n|EXCEPTION FOUND HERE...PLEASE DO NOT IGNORE\
+\n\n|FILE NAME %s\
+\n\n|LINE NUMBER %d\
+\n\n|METHOD NAME %s\
+\n\n|EXCEPTION REASON %@\
+\n\n\n\n\n\n\n",strrchr(__FILE__,'/'),__LINE__, __PRETTY_FUNCTION__,e);};
+
+
+#define DATE_COMPONENTS         NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit /** Return date component**/
+#define TIME_COMPONENTS         NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit /** Return time component**/
+
+
+#define USER_DEFAULTS           [NSUserDefaults standardUserDefaults]
+#define NOTIFICATION_CENTER     [NSNotificationCenter defaultCenter]
+#define SHARED_APPLICATION      [UIApplication sharedApplication]
+
+
+#endif

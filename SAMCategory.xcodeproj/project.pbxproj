@@ -87,6 +87,7 @@
 		E058382B19E81FC900A27617 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		E058382C19E81FC900A27617 /* UIViewController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Addition.h"; sourceTree = "<group>"; };
 		E058382D19E81FC900A27617 /* UIViewController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Addition.m"; sourceTree = "<group>"; };
+		E09F21DA1A1DD40A008DA0D9 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				E058381719E81FC900A27617 /* Categories.h */,
+				E09F21DA1A1DD40A008DA0D9 /* Macros.h */,
 				E058381819E81FC900A27617 /* NSData+Conversion.h */,
 				E058381919E81FC900A27617 /* NSData+Conversion.m */,
 				E058381A19E81FC900A27617 /* NSDate+Additional.h */,

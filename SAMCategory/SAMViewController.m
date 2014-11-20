@@ -7,8 +7,6 @@
 //
 
 #import "SAMViewController.h"
-#import "Categories.h"
-#import "SAMUtility.h"
 
 @interface SAMViewController ()
 
@@ -33,8 +31,16 @@
     
     
     NSString *myString = @"abcdefghijklmnopqrstuvwxyz";
-    NSLog(@"%@",[myString reverseString]);
- 
+    NSLog(@"Reverse String %@",[myString reverseString]);
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:DATE_COMPONENTS fromDate:[NSDate date]];
+
+    NSInteger day = [components day];
+    NSInteger month = [components month];
+    NSInteger year = [components year];
+
+    debug(@"day %ld, month %ld, year %ld",(long)day,(long)month,(long)year);
+    
 }
 
 - (void)didReceiveMemoryWarning
