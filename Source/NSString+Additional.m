@@ -10,6 +10,8 @@
 
 @implementation NSString (Additional)
 
+#pragma mark - Validations
+
 - (BOOL)isNull {
     
     if([self isKindOfClass:[NSNull class]] || [self isEmpty]) {
@@ -18,6 +20,11 @@
     
     return NO;
 }
+
+- (BOOL)isEmpty {
+    return [[self trimWhitespace] isEqualToString:@""];
+}
+
 
 - (BOOL)isEmail {
     
@@ -31,6 +38,16 @@
     
 }
 
+- (BOOL)isStartsWithACapitalLetter {
+    
+    unichar firstCharacter = [self characterAtIndex:0];
+    return [[NSCharacterSet uppercaseLetterCharacterSet]
+            characterIsMember:firstCharacter];
+    
+}
+
+#pragma mark - 
+
 - (NSString *)trimWhitespace {
     
 //    NSMutableString *str = [self mutableCopy];
@@ -39,18 +56,6 @@
     
     return [self stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-}
-
-- (BOOL)isEmpty {
-    return [[self trimWhitespace] isEqualToString:@""];
-}
-
-- (BOOL)isStartsWithACapitalLetter {
-
-    unichar firstCharacter = [self characterAtIndex:0];
-    return [[NSCharacterSet uppercaseLetterCharacterSet]
-            characterIsMember:firstCharacter];
-
 }
 
 - (NSUInteger)numberOfWords {
@@ -122,4 +127,18 @@
                                                                                                  CFSTR(""),
                                                                                                  CFStringConvertNSStringEncodingToEncoding(encoding));
 }
+
+#pragma mark - Date Format
+
+- (NSDate *)dateFromFormat: (NSString *)formatter {
+
+    //    debug(@"dateString %@",dateString);
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [dateFormatter setDateFormat:formatter];
+    
+    NSDate *dateFromString = [dateFormatter dateFromString:self];
+    return dateFromString;
+}
+
 @end

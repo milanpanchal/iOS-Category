@@ -10,15 +10,19 @@
 
 @interface NSString (Additional)
 
+#pragma mark - Validations
+
 - (BOOL)isNull ;
-
-- (BOOL)isEmail ;
-
-- (NSString *)trimWhitespace ;
 
 - (BOOL)isEmpty ;
 
+- (BOOL)isEmail ;
+
 - (BOOL)isStartsWithACapitalLetter;
+
+#pragma mark - 
+
+- (NSString *)trimWhitespace ;
 
 - (NSUInteger)numberOfWords ;
 
@@ -36,5 +40,9 @@
 - (NSString *)urlDecode ;
 
 - (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding ;
+
+#pragma mark - Date Format
+
+- (NSDate *)dateFromFormat: (NSString *)formatter ;
 
 @end
