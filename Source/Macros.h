@@ -87,17 +87,16 @@
 
 /**Date formats**/
 
-#define DATE_FORMAT_DD_MM_YYYY              @"dd-MM-yyyy"
-#define DATE_FORMAT_YYYY_MM_DD              @"yyyy-MM-dd"
 
-#define DATE_FORMAT_MMM_DD_YYYY             @"MMM dd, yyyy"
-
-#define DATE_FORMAT_DD_MM_YYYY_HH_MM_12H    @"dd-MM-yyyy hh:mm a"
-#define DATE_FORMAT_MMM_DD_YYYY_HH_MM_SS    @"MMM dd, yyyy hh:mm:ss a"
-#define DATE_FORMAT_MMM_DD_YYYY_HH_MM_12H   @"MMM dd, yyyy hh:mm a"
-
-#define DATE_FORMAT_HH_MM_SS                @"HH:mm:ss"
-
+#define DATE_FORMAT_DD_MM_YYYY              @"dd-MM-yyyy"               //e.g. 24-07-1990
+#define DATE_FORMAT_DD_MM_YYYY_HH_MM_12H    @"dd-MM-yyyy hh:mm a"       //e.g. 24-07-1990 05:20 AM
+#define DATE_FORMAT_YYYY_MM_DD              @"yyyy-MM-dd"               //e.g. 1990-07-24
+#define DATE_FORMAT_MMM_DD_YYYY             @"MMM dd, yyyy"             //e.g. Jul 24, 1990
+#define DATE_FORMAT_MMMM_DD                 @"MMMM dd"                  //e.g. July 24
+#define DATE_FORMAT_MMM_DD_YYYY_HH_MM_SS    @"MMM dd, yyyy hh:mm:ss a"  //e.g. Jul 24, 2014 05:20:50 AM
+#define DATE_FORMAT_MMM_DD_YYYY_HH_MM_12H   @"MMM dd, yyyy hh:mm a"     //e.g. Jul 24, 2014 05:20 AM
+#define DATE_FORMAT_HH_MM_SS                @"HH:mm:ss"                 //e.g. 05:20:50 AM
+#define DATE_FORMAT_EEEE                    @"EEEE"                     //e.g. Tuesday
 
 /** Convert object to nil if its from NSNull class**/
 

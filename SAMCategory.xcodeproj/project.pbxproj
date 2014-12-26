@@ -32,6 +32,7 @@
 		E058383619E81FC900A27617 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E058382919E81FC900A27617 /* UIImage+Additional.m */; };
 		E058383719E81FC900A27617 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E058382B19E81FC900A27617 /* UIView+Additional.m */; };
 		E058383819E81FC900A27617 /* UIViewController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = E058382D19E81FC900A27617 /* UIViewController+Addition.m */; };
+		E08523631A4D2E3B00FFF492 /* NSMutableArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = E08523621A4D2E3B00FFF492 /* NSMutableArray+Addition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		E058382B19E81FC900A27617 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		E058382C19E81FC900A27617 /* UIViewController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Addition.h"; sourceTree = "<group>"; };
 		E058382D19E81FC900A27617 /* UIViewController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Addition.m"; sourceTree = "<group>"; };
+		E08523611A4D2E3B00FFF492 /* NSMutableArray+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Addition.h"; sourceTree = "<group>"; };
+		E08523621A4D2E3B00FFF492 /* NSMutableArray+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Addition.m"; sourceTree = "<group>"; };
 		E09F21DA1A1DD40A008DA0D9 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +218,8 @@
 				E058382B19E81FC900A27617 /* UIView+Additional.m */,
 				E058382C19E81FC900A27617 /* UIViewController+Addition.h */,
 				E058382D19E81FC900A27617 /* UIViewController+Addition.m */,
+				E08523611A4D2E3B00FFF492 /* NSMutableArray+Addition.h */,
+				E08523621A4D2E3B00FFF492 /* NSMutableArray+Addition.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				E058383619E81FC900A27617 /* UIImage+Additional.m in Sources */,
 				E058383019E81FC900A27617 /* NSObject+Additional.m in Sources */,
 				E058383319E81FC900A27617 /* UIAlertView+Additional.m in Sources */,
+				E08523631A4D2E3B00FFF492 /* NSMutableArray+Addition.m in Sources */,
 				E019EFFF19B733D600F96406 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
