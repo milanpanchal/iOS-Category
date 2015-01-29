@@ -18,4 +18,6 @@
 
 - (UIImage*)scaleToSize:(CGSize)newSize ;
 
+- (UIImage *)croppedImage:(CGRect)bounds ;
+
 @end

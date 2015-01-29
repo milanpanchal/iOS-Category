@@ -77,7 +77,7 @@ static bool isFirstAccess = YES;
     
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
-    CFRelease(theUUID);
+    if(theUUID) CFRelease(theUUID);
     return (__bridge NSString*)string;
 }
 
@@ -88,9 +88,15 @@ static bool isFirstAccess = YES;
     NSLocale *currentLocale = [NSLocale currentLocale];  // get the current locale.
     NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
     NSString *identifier = [NSLocale localeIdentifierFromComponents: [NSDictionary dictionaryWithObject: countryCode forKey: NSLocaleCountryCode]];
-    NSString *country = [[NSLocale currentLocale] displayNameForKey: NSLocaleIdentifier value: identifier];
+    NSString *countryName = [[NSLocale currentLocale] displayNameForKey: NSLocaleIdentifier value: identifier];
     
-    return @{@"name":country,@"code":countryCode};
+    //NOTE: On iOS 8.1 simulator countryName returns nil
+    if (!countryName) {
+        countryName = @"United States";
+        countryCode = @"US";
+    }
+    
+    return @{@"name":countryName,@"code":countryCode};
 }
 
 #pragma mark - check for application is running first time or not

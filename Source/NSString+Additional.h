@@ -28,6 +28,10 @@
 
 - (NSString *)reverseString ;
 
+- (NSString *)concat:(NSString *)string ;
+
+- (BOOL)contains:(NSString *)string ;
+
 + (NSString *)truncateString:(NSString *) string toCharacterCount:(NSUInteger) count ;
 
 

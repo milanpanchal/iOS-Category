@@ -14,7 +14,7 @@
 
 - (BOOL)isNull {
     
-    if([self isKindOfClass:[NSNull class]] || [self isEmpty]) {
+    if(self == nil || [self isKindOfClass:[NSNull class]] || [self isEmpty]) {
         return YES;
     }
     
@@ -89,6 +89,28 @@
     
     return reversedString;
 }
+
+- (NSString *)concat:(NSString *)string {
+ 
+    if (!string) {
+        return self;
+    }
+    
+    return [NSString stringWithFormat:@"%@%@",self, string];
+}
+
+- (BOOL)contains:(NSString *)string {
+    
+    if (string) {
+        NSRange range = [self rangeOfString:string];
+        return (range.location != NSNotFound);
+        
+    }else {
+        return NO;
+    }
+
+}
+
 
 + (NSString *)truncateString:(NSString *) string toCharacterCount:(NSUInteger) count {
     

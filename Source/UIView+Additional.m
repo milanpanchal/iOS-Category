@@ -55,6 +55,13 @@
 	} completion:nil];
 }
 
+
+- (void)removeAllSubviews {
+    
+    [self.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+}
+
+
 #pragma mark - Size shortcuts
 
 - (CGFloat)left {

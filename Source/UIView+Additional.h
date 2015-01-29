@@ -18,6 +18,8 @@
 
 - (void)fadeIn ;
 
+- (void)removeAllSubviews ;
+
 #pragma mark - Size shortcuts
 
 @property (nonatomic) CGFloat left;
