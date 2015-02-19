@@ -279,6 +279,16 @@ static const unsigned componentFlags = (NSYearCalendarUnit| NSMonthCalendarUnit 
     return ([self isEarlierThanDate:[NSDate date]]);
 }
 
+// Thanks, milan panchal
+- (BOOL)isYearLeapYear {
+    return (( self.year%100 != 0) && (self.year%4 == 0)) || self.year%400 == 0;
+}
+
+// Thanks, milan panchal
+- (NSInteger)numnerOfDaysInCurrentYear {
+    return [self isLastYear] ? 366 : 365 ;
+}
+
 
 #pragma mark - Roles
 - (BOOL) isTypicallyWeekend

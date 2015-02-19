@@ -69,6 +69,10 @@
 - (BOOL) isInFuture;
 - (BOOL) isInPast;
 
+- (BOOL)isYearLeapYear ;
+
+- (NSInteger)numnerOfDaysInCurrentYear ;
+
 // Date roles
 - (BOOL) isTypicallyWorkday;
 - (BOOL) isTypicallyWeekend;
