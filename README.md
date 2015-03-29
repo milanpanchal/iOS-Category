@@ -8,7 +8,7 @@ iOS Category for UIKit and Foundation classes like UIColor, UIView, NSDate, NSDa
 
 ### Cocoapods
 
-    pod 'iOS-Category', '~> 1.0.2'
+    pod 'iOS-Category', '~> 1.0.4'
 
 ### From Source
 
