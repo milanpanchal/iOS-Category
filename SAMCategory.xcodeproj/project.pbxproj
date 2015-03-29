@@ -21,6 +21,8 @@
 		E019F01419B733D600F96406 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E019EFF619B733D600F96406 /* UIKit.framework */; };
 		E019F01C19B733D600F96406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E019F01A19B733D600F96406 /* InfoPlist.strings */; };
 		E019F01E19B733D600F96406 /* SAMCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E019F01D19B733D600F96406 /* SAMCategoryTests.m */; };
+		E04785461AA24268002BA96F /* UILabel+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E04785451AA24268002BA96F /* UILabel+Additional.m */; };
+		E04785481AA244FD002BA96F /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = E04785471AA244FD002BA96F /* pattern.png */; };
 		E058382E19E81FC900A27617 /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E058381919E81FC900A27617 /* NSData+Conversion.m */; };
 		E058382F19E81FC900A27617 /* NSDate+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E058381B19E81FC900A27617 /* NSDate+Additional.m */; };
 		E058383019E81FC900A27617 /* NSObject+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = E058381D19E81FC900A27617 /* NSObject+Additional.m */; };
@@ -65,6 +67,9 @@
 		E019F01919B733D600F96406 /* SAMCategoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAMCategoryTests-Info.plist"; sourceTree = "<group>"; };
 		E019F01B19B733D600F96406 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E019F01D19B733D600F96406 /* SAMCategoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMCategoryTests.m; sourceTree = "<group>"; };
+		E04785441AA24268002BA96F /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Additional.h"; sourceTree = "<group>"; };
+		E04785451AA24268002BA96F /* UILabel+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Additional.m"; sourceTree = "<group>"; };
+		E04785471AA244FD002BA96F /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
 		E058381719E81FC900A27617 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		E058381819E81FC900A27617 /* NSData+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
 		E058381919E81FC900A27617 /* NSData+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 				E019F00819B733D600F96406 /* SAMViewController.m */,
 				E019F00419B733D600F96406 /* Main.storyboard */,
 				E019F00A19B733D600F96406 /* Images.xcassets */,
+				E04785471AA244FD002BA96F /* pattern.png */,
 				E019EFF919B733D600F96406 /* Supporting Files */,
 			);
 			path = SAMCategory;
@@ -220,6 +226,8 @@
 				E058382D19E81FC900A27617 /* UIViewController+Addition.m */,
 				E08523611A4D2E3B00FFF492 /* NSMutableArray+Addition.h */,
 				E08523621A4D2E3B00FFF492 /* NSMutableArray+Addition.m */,
+				E04785441AA24268002BA96F /* UILabel+Additional.h */,
+				E04785451AA24268002BA96F /* UILabel+Additional.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04785481AA244FD002BA96F /* pattern.png in Resources */,
 				E019F00B19B733D600F96406 /* Images.xcassets in Resources */,
 				E019EFFD19B733D600F96406 /* InfoPlist.strings in Resources */,
 				E019F00619B733D600F96406 /* Main.storyboard in Resources */,
@@ -323,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E058382F19E81FC900A27617 /* NSDate+Additional.m in Sources */,
+				E04785461AA24268002BA96F /* UILabel+Additional.m in Sources */,
 				E019F00319B733D600F96406 /* SAMAppDelegate.m in Sources */,
 				E058383819E81FC900A27617 /* UIViewController+Addition.m in Sources */,
 				E058383119E81FC900A27617 /* NSString+Additional.m in Sources */,

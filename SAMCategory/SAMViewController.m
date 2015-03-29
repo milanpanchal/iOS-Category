@@ -7,7 +7,7 @@
 //
 
 #import "SAMViewController.h"
-
+#import "UILabel+Additional.h"
 static NSString *cellIdenifier = @"cellIdenifier";
 
 @interface SAMViewController ()<UITableViewDelegate,UITableViewDataSource> {
