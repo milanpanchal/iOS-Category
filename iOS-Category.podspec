@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "iOS-Category"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "iOS Category for UIKit and Foundation classes like UIColor, UIView, NSDate, NSData etc"
   s.description  = <<-DESC
                    A longer description of iOS-Category in Markdown format.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author             = { 'Milan Panchal' => 'sam07it22@gmail.com' }
   s.social_media_url   = "http://twitter.com/milan_panchal24"
   s.platform     = :ios, "5.0"
-  s.source       = { :git => "https://github.com/milanpanchal/iOS-Category.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/milanpanchal/iOS-Category.git", :tag => "1.0.4" }
   s.source_files  = "Source"
   s.requires_arc = true
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
