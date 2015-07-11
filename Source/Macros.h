@@ -115,21 +115,29 @@ yyyy-MM-dd HH:mm:ss Z	2012-11-04 20:09:00 -0600
  
  **/
 
+#define DATE_FORMAT_YYYY_MM_DD_HH_MM_SS     @"yyyy-MM-dd HH:mm:ss"      //e.g. 1990-07-24 15:23:10
+#define DATE_FORMAT_YYYY_MM_DD              @"yyyy-MM-dd"               //e.g. 1990-07-24
 
 #define DATE_FORMAT_DD_MM_YYYY              @"dd-MM-yyyy"               //e.g. 24-07-1990
-#define DATE_FORMAT_MM_DD_YYYY              @"MM-dd-yyyy"               //e.g. 07-24-1990
-#define DATE_FORMAT_YYYY_MM_DD              @"yyyy-MM-dd"               //e.g. 1990-07-24
+#define DATE_FORMAT_DD_MMM_YYYY             @"dd-MMM-yyyy"              //e.g. 24-Jul-1990
 #define DATE_FORMAT_DD_MM_YYYY_HH_MM_12H    @"dd-MM-yyyy hh:mm a"       //e.g. 24-07-1990 05:20 AM
+#define DATE_FORMAT_DD_MM_YYYY_HH_MM_SS     @"dd-MM-yyyy HH:mm:ss"      //e.g. 24-07-1990 15:20
+#define DATE_FORMAT_DD_MM_YYYY_HH_MM_SS_12H @"dd-MM-yyyy hh:mm:ss a"    //e.g. 24-07-1990 05:20 AM
+
+#define DATE_FORMAT_MM_DD_YYYY              @"MM-dd-yyyy"               //e.g. 07-24-1990
 #define DATE_FORMAT_MMM_DD_YYYY             @"MMM dd, yyyy"             //e.g. Jul 24, 1990
 #define DATE_FORMAT_MMMM_DD                 @"MMMM dd"                  //e.g. July 24
 #define DATE_FORMAT_MMMM                    @"MMMM"                     //e.g. July, November
 #define DATE_FORMAT_MMM_DD_YYYY_HH_MM_SS    @"MMM dd, yyyy hh:mm:ss a"  //e.g. Jul 24, 2014 05:20:50 AM
 #define DATE_FORMAT_MMM_DD_YYYY_HH_MM_12H   @"MMM dd, yyyy hh:mm a"     //e.g. Jul 24, 2014 05:20 AM
-#define DATE_FORMAT_HH_MM_SS                @"HH:mm:ss"                 //e.g. 05:20:50 AM
+
+#define DATE_FORMAT_HH_MM_SS                @"HH:mm:ss"                 //e.g. 15:20:50
+
 #define DATE_FORMAT_E                       @"E"                        //e.g. Tue
 #define DATE_FORMAT_EEEE                    @"EEEE"                     //e.g. Tuesday
+
 #define DATE_FORMAT_QQQ                     @"QQQ"                      //e.g. Q1,Q2,Q3,Q4
-#define DATE_FORMAT_QQQQ                    @"QQQQ"                      //e.g. 4th quarter
+#define DATE_FORMAT_QQQQ                    @"QQQQ"                     //e.g. 4th quarter
 
 
 /** Convert object to nil if its from NSNull class**/

@@ -40,4 +40,6 @@
 
 + (BOOL)isCameraAvailable ;
 
++ (NSString *)returnEmptyIfNull:(NSString *)str ;
+
 @end

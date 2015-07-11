@@ -62,13 +62,34 @@ static const char kSAMAlertWrapper;
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:title
                                                        message:message
                                                       delegate:nil
-                                             cancelButtonTitle:@"OK"
+                                             cancelButtonTitle:NSLocalizedString(@"OK", nil)
                                              otherButtonTitles:nil];
     
     
     [alertView show];
 }
 
+//TODO: Need to work on varargs with complition handler
+/*
++ (void)showAlertWithTitle:(NSString*)title message:(NSString *)message  cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... completion:(void(^)(UIAlertView *alertView, NSInteger buttonIndex))completion {
+    
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:title
+                                                       message:message
+                                                      delegate:nil
+                                             cancelButtonTitle:cancelButtonTitle
+                                             otherButtonTitles:otherButtonTitles,nil];
+    
+    
+    SAMAlertWrapper *alertWrapper = [[SAMAlertWrapper alloc] init];
+//    alertWrapper.completionBlock = completion;
+    alertView.delegate = alertWrapper;
+    
+    // Set the wrapper as an associated object
+    objc_setAssociatedObject(alertView, &kSAMAlertWrapper, alertWrapper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+    [alertView show];
+}
+*/
 
 + (void)showAlertViewWithTitle:(NSString*)title{
     
@@ -78,8 +99,18 @@ static const char kSAMAlertWrapper;
 
 + (void)showAlertViewWithError:(NSError*)error{
 
-    [self showAlertViewWithTitle:error.description andMessage:nil];
+    [self showAlertViewWithTitle:error.localizedDescription andMessage:nil];
     
 }
+
+
++ (void)showNoNetworkAlertOnWindow {
+    
+    //    [UIAlertView showAlertViewWithTitle:@"Error" andMessage:@"Internet connection appears to be offline. Please check your settings and try again."];
+    [UIAlertView showAlertViewWithTitle:NSLocalizedString(@"Error", nil)
+                             andMessage:NSLocalizedString(@"No network. Please try after some time.", nil)];
+    
+}
+
 
 @end

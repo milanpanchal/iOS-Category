@@ -18,5 +18,6 @@
 
 + (void)showAlertViewWithError:(NSError*)error ;
 
-    
++ (void)showNoNetworkAlertOnWindow ;
+
 @end
