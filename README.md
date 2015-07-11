@@ -45,6 +45,9 @@ Follow me on
 
 2. **Github** ([/milanpanchal](https://github.com/milanpanchal/))
 
+3. **Blog** ([https://techfuzionwithsam.wordpress.com/](https://techfuzionwithsam.wordpress.com/))
+
+
 
 ##License
 
