@@ -3,7 +3,7 @@
 //  SAMCategory
 //
 //  Created by MilanPanchal on 01/03/15.
-//  Copyright (c) 2015 Pantech. All rights reserved.
+//  Copyright (c) 2015 Jeenal Infotech. All rights reserved.
 //
 
 #import "UILabel+Additional.h"
