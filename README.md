@@ -6,7 +6,7 @@ iOS Category for UIKit and Foundation classes like UIColor, UIView, NSDate, NSDa
 
 ##Installation 
 
-### Cocoapods
+### CocoaPods
 
     pod 'iOS-Category', '~> 1.0.5'
 
