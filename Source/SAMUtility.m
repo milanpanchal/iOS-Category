@@ -78,7 +78,7 @@ static bool isFirstAccess = YES;
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);
     if(theUUID) CFRelease(theUUID);
-    return (__bridge NSString*)string;
+    return (__bridge_transfer NSString*)string;
 }
 
 #pragma mark - Local Country name and country code
