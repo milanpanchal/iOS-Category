@@ -10,7 +10,7 @@
 
 @interface UIView (Additional)
 
-- (NSArray *)superviews ;
+@property (nonatomic, readonly, copy) NSArray *superviews ;
 
 - (void)fadeOut ;
 

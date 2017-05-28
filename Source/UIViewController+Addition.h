@@ -10,7 +10,7 @@
 
 @interface UIViewController (Addition)
 
-- (BOOL)isVisible;
+@property (nonatomic, getter=isVisible, readonly) BOOL visible;
 
 
 @end

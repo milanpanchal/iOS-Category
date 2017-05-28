@@ -16,7 +16,7 @@
 	UIView *view = self;
 	UIView *superview = nil;
 	while (view) {
-		superview = [view superview];
+		superview = view.superview;
 		if (!superview) {
 			break;
 		}

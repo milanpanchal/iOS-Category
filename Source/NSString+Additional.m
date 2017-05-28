@@ -60,7 +60,7 @@
 
 - (NSUInteger)numberOfWords {
     __block NSUInteger count = 0;
-    [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
+    [self enumerateSubstringsInRange:NSMakeRange(0, self.length)
                             options:NSStringEnumerationByWords|NSStringEnumerationSubstringNotRequired
                          usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
                              count++;
@@ -78,9 +78,9 @@
 //    }
     
     // New way
-    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[self length]];
+    NSMutableString *reversedString = [NSMutableString stringWithCapacity:self.length];
     
-    [self enumerateSubstringsInRange:NSMakeRange(0,[self length])
+    [self enumerateSubstringsInRange:NSMakeRange(0,self.length)
                              options:(NSStringEnumerationReverse | NSStringEnumerationByComposedCharacterSequences)
                           usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
                                   [reversedString appendString:substring];
@@ -156,8 +156,8 @@
 
     //    debug(@"dateString %@",dateString);
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:formatter];
+    dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
+    dateFormatter.dateFormat = formatter;
     
     NSDate *dateFromString = [dateFormatter dateFromString:self];
     return dateFromString;

@@ -19,7 +19,7 @@
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context, rect);
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -30,29 +30,29 @@
 
 + (UIImage *)screenshot {
     
-    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+    CGSize imageSize = [UIScreen mainScreen].bounds.size;
     
-    if (NULL != UIGraphicsBeginImageContextWithOptions) {
+    if (NULL != &UIGraphicsBeginImageContextWithOptions) {
         UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
-    } else {
-        UIGraphicsBeginImageContext(imageSize);
+//    } else {
+//        UIGraphicsBeginImageContext(imageSize);
     }
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
-        if (![window respondsToSelector:@selector(screen)] || [window screen] == [UIScreen mainScreen]) {
+    for (UIWindow *window in [UIApplication sharedApplication].windows) {
+        if (![window respondsToSelector:@selector(screen)] || window.screen == [UIScreen mainScreen]) {
             CGContextSaveGState(context);
             
-            CGContextTranslateCTM(context, [window center].x, [window center].y);
+            CGContextTranslateCTM(context, window.center.x, window.center.y);
             
-            CGContextConcatCTM(context, [window transform]);
+            CGContextConcatCTM(context, window.transform);
             
             CGContextTranslateCTM(context,
-                                  -[window bounds].size.width * [[window layer] anchorPoint].x,
-                                  -[window bounds].size.height * [[window layer] anchorPoint].y);
+                                  -window.bounds.size.width * window.layer.anchorPoint.x,
+                                  -window.bounds.size.height * window.layer.anchorPoint.y);
             
-            [[window layer] renderInContext:context];
+            [window.layer renderInContext:context];
             
             CGContextRestoreGState(context);
         }
@@ -168,7 +168,7 @@
     
     CGRect scaledBounds = CGRectMake(bounds.origin.x * scale, bounds.origin.y * scale, bounds.size.width * scale, bounds.size.height * scale);
     
-    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], scaledBounds);
+    CGImageRef imageRef = CGImageCreateWithImageInRect(self.CGImage, scaledBounds);
     
     UIImage *croppedImage = [UIImage imageWithCGImage:imageRef scale:self.scale orientation:UIImageOrientationUp];
     

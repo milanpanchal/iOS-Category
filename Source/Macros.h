@@ -166,8 +166,8 @@ yyyy-MM-dd HH:mm:ss Z	2012-11-04 20:09:00 -0600
 \n\n\n\n\n\n\n",strrchr(__FILE__,'/'),__LINE__, __PRETTY_FUNCTION__,e);};
 
 
-#define DATE_COMPONENTS         NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit /** Return date component**/
-#define TIME_COMPONENTS         NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit /** Return time component**/
+#define DATE_COMPONENTS         NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay /** Return date component**/
+#define TIME_COMPONENTS         NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond /** Return time component**/
 
 
 #define USER_DEFAULTS           [NSUserDefaults standardUserDefaults]

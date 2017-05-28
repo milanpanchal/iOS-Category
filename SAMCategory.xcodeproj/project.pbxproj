@@ -125,11 +125,11 @@
 		E019EFE619B733D600F96406 = {
 			isa = PBXGroup;
 			children = (
-				E058381619E81FC900A27617 /* Source */,
-				E019EFF819B733D600F96406 /* SAMCategory */,
-				E019F01719B733D600F96406 /* SAMCategoryTests */,
 				E019EFF119B733D600F96406 /* Frameworks */,
 				E019EFF019B733D600F96406 /* Products */,
+				E019EFF819B733D600F96406 /* SAMCategory */,
+				E019F01719B733D600F96406 /* SAMCategoryTests */,
+				E058381619E81FC900A27617 /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,8 +145,8 @@
 		E019EFF119B733D600F96406 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E019EFF219B733D600F96406 /* Foundation.framework */,
 				E019EFF419B733D600F96406 /* CoreGraphics.framework */,
+				E019EFF219B733D600F96406 /* Foundation.framework */,
 				E019EFF619B733D600F96406 /* UIKit.framework */,
 				E019F01119B733D600F96406 /* XCTest.framework */,
 			);
@@ -156,13 +156,13 @@
 		E019EFF819B733D600F96406 /* SAMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				E019F00A19B733D600F96406 /* Images.xcassets */,
+				E019F00419B733D600F96406 /* Main.storyboard */,
+				E04785471AA244FD002BA96F /* pattern.png */,
 				E019F00119B733D600F96406 /* SAMAppDelegate.h */,
 				E019F00219B733D600F96406 /* SAMAppDelegate.m */,
 				E019F00719B733D600F96406 /* SAMViewController.h */,
 				E019F00819B733D600F96406 /* SAMViewController.m */,
-				E019F00419B733D600F96406 /* Main.storyboard */,
-				E019F00A19B733D600F96406 /* Images.xcassets */,
-				E04785471AA244FD002BA96F /* pattern.png */,
 				E019EFF919B733D600F96406 /* Supporting Files */,
 			);
 			path = SAMCategory;
@@ -171,9 +171,9 @@
 		E019EFF919B733D600F96406 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E019EFFA19B733D600F96406 /* SAMCategory-Info.plist */,
 				E019EFFB19B733D600F96406 /* InfoPlist.strings */,
 				E019EFFE19B733D600F96406 /* main.m */,
+				E019EFFA19B733D600F96406 /* SAMCategory-Info.plist */,
 				E019F00019B733D600F96406 /* SAMCategory-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -191,8 +191,8 @@
 		E019F01819B733D600F96406 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E019F01919B733D600F96406 /* SAMCategoryTests-Info.plist */,
 				E019F01A19B733D600F96406 /* InfoPlist.strings */,
+				E019F01919B733D600F96406 /* SAMCategoryTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,6 +206,8 @@
 				E058381919E81FC900A27617 /* NSData+Conversion.m */,
 				E058381A19E81FC900A27617 /* NSDate+Additional.h */,
 				E058381B19E81FC900A27617 /* NSDate+Additional.m */,
+				E08523611A4D2E3B00FFF492 /* NSMutableArray+Addition.h */,
+				E08523621A4D2E3B00FFF492 /* NSMutableArray+Addition.m */,
 				E058381C19E81FC900A27617 /* NSObject+Additional.h */,
 				E058381D19E81FC900A27617 /* NSObject+Additional.m */,
 				E058381E19E81FC900A27617 /* NSString+Additional.h */,
@@ -220,14 +222,12 @@
 				E058382719E81FC900A27617 /* UIColor+Additional.m */,
 				E058382819E81FC900A27617 /* UIImage+Additional.h */,
 				E058382919E81FC900A27617 /* UIImage+Additional.m */,
+				E04785441AA24268002BA96F /* UILabel+Additional.h */,
+				E04785451AA24268002BA96F /* UILabel+Additional.m */,
 				E058382A19E81FC900A27617 /* UIView+Additional.h */,
 				E058382B19E81FC900A27617 /* UIView+Additional.m */,
 				E058382C19E81FC900A27617 /* UIViewController+Addition.h */,
 				E058382D19E81FC900A27617 /* UIViewController+Addition.m */,
-				E08523611A4D2E3B00FFF492 /* NSMutableArray+Addition.h */,
-				E08523621A4D2E3B00FFF492 /* NSMutableArray+Addition.m */,
-				E04785441AA24268002BA96F /* UILabel+Additional.h */,
-				E04785451AA24268002BA96F /* UILabel+Additional.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SAM;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Pantech;
 				TargetAttributes = {
 					E019F00F19B733D600F96406 = {
@@ -409,14 +409,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -429,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -448,20 +453,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -470,8 +480,6 @@
 		E019F02219B733D600F96406 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAMCategory/SAMCategory-Prefix.pch";
 				INFOPLIST_FILE = "SAMCategory/SAMCategory-Info.plist";
@@ -484,8 +492,6 @@
 		E019F02319B733D600F96406 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SAMCategory/SAMCategory-Prefix.pch";
 				INFOPLIST_FILE = "SAMCategory/SAMCategory-Info.plist";

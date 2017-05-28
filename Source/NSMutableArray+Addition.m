@@ -12,7 +12,7 @@
 
 - (void)shuffle {
 
-    NSUInteger count = [self count];
+    NSUInteger count = self.count;
     
     for (NSUInteger i = 0; i < count; ++i) {
         NSUInteger remainingCount = count - i;

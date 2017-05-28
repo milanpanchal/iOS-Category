@@ -12,21 +12,21 @@
 
 #pragma mark - Validations
 
-- (BOOL)isNull ;
+@property (nonatomic, getter=isNull, readonly) BOOL null ;
 
-- (BOOL)isEmpty ;
+@property (nonatomic, getter=isEmpty, readonly) BOOL empty ;
 
-- (BOOL)isEmail ;
+@property (nonatomic, getter=isEmail, readonly) BOOL email ;
 
-- (BOOL)isStartsWithACapitalLetter;
+@property (nonatomic, getter=isStartsWithACapitalLetter, readonly) BOOL startsWithACapitalLetter;
 
 #pragma mark - 
 
-- (NSString *)trimWhitespace ;
+@property (nonatomic, readonly, copy) NSString *trimWhitespace ;
 
-- (NSUInteger)numberOfWords ;
+@property (nonatomic, readonly) NSUInteger numberOfWords ;
 
-- (NSString *)reverseString ;
+@property (nonatomic, readonly, copy) NSString *reverseString ;
 
 - (NSString *)concat:(NSString *)string ;
 
@@ -37,11 +37,11 @@
 
 #pragma mark - URL Encoding and Decoding
 
-- (NSString *)urlEncode ;
+@property (nonatomic, readonly, copy) NSString *urlEncode ;
 
 - (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding ;
 
-- (NSString *)urlDecode ;
+@property (nonatomic, readonly, copy) NSString *urlDecode ;
 
 - (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding ;
 

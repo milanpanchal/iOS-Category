@@ -10,14 +10,14 @@
 
 @interface UIApplication (Additional)
 
-- (NSURL *)documentsDirectoryURL ;
+@property (nonatomic, readonly, copy) NSURL *documentsDirectoryURL ;
 
-- (NSURL *)cachesDirectoryURL ;
+@property (nonatomic, readonly, copy) NSURL *cachesDirectoryURL ;
 
-- (NSURL *)downloadsDirectoryURL ;
+@property (nonatomic, readonly, copy) NSURL *downloadsDirectoryURL ;
 
-- (NSURL *)libraryDirectoryURL ;
+@property (nonatomic, readonly, copy) NSURL *libraryDirectoryURL ;
 
-- (NSURL *)applicationSupportDirectoryURL ;
+@property (nonatomic, readonly, copy) NSURL *applicationSupportDirectoryURL ;
 
 @end

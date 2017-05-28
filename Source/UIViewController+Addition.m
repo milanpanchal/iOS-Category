@@ -11,7 +11,7 @@
 @implementation UIViewController (Addition)
 
 - (BOOL)isVisible {
-    return [self isViewLoaded] && self.view.window;
+    return self.viewLoaded && self.view.window;
 }
 
 @end
