@@ -26,9 +26,9 @@
 #pragma mark - UIColor with Hex string
 
 + (UIColor *) colorWithHexString: (NSString *) hexString {
-    NSString *colorString = [[hexString stringByReplacingOccurrencesOfString: @"#" withString: @""] uppercaseString];
+    NSString *colorString = [hexString stringByReplacingOccurrencesOfString: @"#" withString: @""].uppercaseString;
     CGFloat alpha, red, blue, green;
-    switch ([colorString length]) {
+    switch (colorString.length) {
         case 3: // #RGB
             alpha = 1.0f;
             red   = [self colorComponentFrom: colorString start: 0 length: 1];
@@ -86,7 +86,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     
-    NSArray* colors = [NSArray arrayWithObjects:(id)c1.CGColor, (id)c2.CGColor, nil];
+    NSArray* colors = @[(id)c1.CGColor, (id)c2.CGColor];
     CGGradientRef gradient = CGGradientCreateWithColors(colorspace, (__bridge CFArrayRef)colors, NULL);
     CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, size.height), 0);
     

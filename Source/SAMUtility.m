@@ -59,7 +59,7 @@ static bool isFirstAccess = YES;
     return [[SAMUtility alloc] init];
 }
 
-- (id) init
+- (instancetype) init
 {
     if(SINGLETON){
         return SINGLETON;
@@ -87,7 +87,7 @@ static bool isFirstAccess = YES;
     
     NSLocale *currentLocale = [NSLocale currentLocale];  // get the current locale.
     NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
-    NSString *identifier = [NSLocale localeIdentifierFromComponents: [NSDictionary dictionaryWithObject: countryCode forKey: NSLocaleCountryCode]];
+    NSString *identifier = [NSLocale localeIdentifierFromComponents: @{NSLocaleCountryCode: countryCode}];
     NSString *countryName = [[NSLocale currentLocale] displayNameForKey: NSLocaleIdentifier value: identifier];
     
     //NOTE: On iOS 8.1 simulator countryName returns nil
@@ -130,9 +130,9 @@ static bool isFirstAccess = YES;
         while(temp_addr != NULL) {
             if(temp_addr->ifa_addr->sa_family == AF_INET) {
                 // Check if interface is en0 which is the wifi connection on the iPhone
-                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                if([@(temp_addr->ifa_name) isEqualToString:@"en0"]) {
                     // Get NSString from C String
-                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                    address = @(inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr));
                     
                 }
                 
@@ -171,7 +171,7 @@ static bool isFirstAccess = YES;
             const struct sockaddr_in *addr = (const struct sockaddr_in*)interface->ifa_addr;
             char addrBuf[ MAX(INET_ADDRSTRLEN, INET6_ADDRSTRLEN) ];
             if(addr && (addr->sin_family==AF_INET || addr->sin_family==AF_INET6)) {
-                NSString *name = [NSString stringWithUTF8String:interface->ifa_name];
+                NSString *name = @(interface->ifa_name);
                 NSString *type;
                 if(addr->sin_family == AF_INET) {
                     if(inet_ntop(AF_INET, &addr->sin_addr, addrBuf, INET_ADDRSTRLEN)) {
@@ -185,14 +185,14 @@ static bool isFirstAccess = YES;
                 }
                 if(type) {
                     NSString *key = [NSString stringWithFormat:@"%@/%@", name, type];
-                    addresses[key] = [NSString stringWithUTF8String:addrBuf];
+                    addresses[key] = @(addrBuf);
                 }
             }
         }
         // Free memory
         freeifaddrs(interfaces);
     }
-    return [addresses count] ? addresses : nil;
+    return addresses.count ? addresses : nil;
 }
 
 #pragma mark - GET FREE DISK SPACE
@@ -203,16 +203,16 @@ static bool isFirstAccess = YES;
     
     __autoreleasing NSError *error = nil;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:[paths lastObject] error: &error];
+    NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:paths.lastObject error: &error];
     
     if (dictionary) {
-        NSNumber *fileSystemSizeInBytes = [dictionary objectForKey: NSFileSystemSize];
-        NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
-        totalSpace = [fileSystemSizeInBytes unsignedLongLongValue];
-        totalFreeSpace = [freeFileSystemSizeInBytes unsignedLongLongValue];
+        NSNumber *fileSystemSizeInBytes = dictionary[NSFileSystemSize];
+        NSNumber *freeFileSystemSizeInBytes = dictionary[NSFileSystemFreeSize];
+        totalSpace = fileSystemSizeInBytes.unsignedLongLongValue;
+        totalFreeSpace = freeFileSystemSizeInBytes.unsignedLongLongValue;
         NSLog(@"Memory Capacity of %llu MiB with %llu MiB Free memory available.", ((totalSpace/1024ll)/1024ll), ((totalFreeSpace/1024ll)/1024ll));
     } else {
-        NSLog(@"Error Obtaining System Memory Info: Domain = %@, Code = %ld", [error domain], (long)[error code]);
+        NSLog(@"Error Obtaining System Memory Info: Domain = %@, Code = %ld", error.domain, (long)error.code);
     }
     
     return totalFreeSpace;
